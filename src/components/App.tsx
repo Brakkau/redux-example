@@ -1,13 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
-const App = (props: any) => {
-  return <ol>
-    { props.todos.map( (todo: string) => <li>{ todo }</li>)}
-  </ol>
+const App = (props : any) => {
+    return <ol>
+        {props
+            .todos
+            .map((todo : string) => <li>{todo}</li>)}
+    </ol>
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state : any) => ({
   todos: state.todos
 });
 
